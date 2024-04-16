@@ -1,3 +1,117 @@
-body {
-    
+.grid-layout {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: var(--light-gray);
+    grid-template-columns: 0.2fr 1.3fr 1.5fr;
+    grid-template-rows: 0.1fr 0.7fr 1fr 1.4fr 2.2fr 0.5fr;
+    gap: 1px 1px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "aside . ."
+        "aside search search"
+        "aside yorSales yorSales"
+        "aside boxRow boxRow"
+        "aside funnel orders"
+        "aside transactions transactions"
+
+}
+
+.search {
+    border: var(--light-gray);
+    border-radius: 25px;
+    grid-area: search;
+}
+
+.yorSales {
+    border: var(--light-gray);
+    border-radius: 25px;
+    grid-area: yorSales;
+}
+
+
+.boxRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "payout revenue sessions"
+        "payout revenue sessions"
+        "payout revenue sessions";
+    grid-area: boxRow;
+}
+
+.payout {
+    margin-left: 10px;
+    background-color: var(--gray);
+    border: var(--light-gray);
+    border-radius: 25px;
+    grid-area: payout;
+}
+
+.revenue {
+    background-color: var(--gray);
+    border: var(--light-gray);
+    border-radius: 25px;
+    grid-area: revenue;
+}
+
+.sessions {
+    background-color: var(--gray);
+    border: var(--light-gray);
+    border-radius: 25px;
+    grid-area: sessions;
+}
+
+.aside {
+    padding: 5px;
+    background-color: var(--gray);
+    text-align: center;
+    grid-area: aside;
+}
+
+.funnel {
+    margin-left: 10px;
+    background-color: var(--gray);
+    border: var(--light-gray);
+    border-radius: 25px;
+    grid-area: funnel;
+}
+
+.orders {
+    background-color: var(--gray);
+    border: var(--light-gray);
+    border-radius: 25px;
+    grid-area: orders;
+}
+
+.transactions {
+    margin: 0 10px;
+    background-color: var(--gray);
+    border: var(--light-gray);
+    border-radius: 25px;
+    grid-area: transactions;
+}
+
+.icons {
+    background-color: var(--gray);
+    border: var(--light-gray);
+    border-radius: 25px;
+}
+
+:root {
+    --light-gray: #f7f7f7;
+    --gray: #e2e2e2;
+    --dark-gray: #888888;
+    --darker-gray: #666666;
+    --main-green: #5ee85b;
+    --text-xs: 12px;
+    --text-sm: 14px;
+    --text-base: 16px;
+    --text-md: 18px;
+    --text-xl: 40px;
+    --text-2x1: 64px;
 }
