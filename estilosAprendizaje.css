@@ -1,4 +1,4 @@
-.grid-layout {
+#grid-layout {
     display: grid;
     width: 100%;
     height: 100%;
@@ -18,20 +18,23 @@
 
 }
 
-.search {
+#search {
     border: var(--light-gray);
     border-radius: 25px;
     grid-area: search;
 }
 
-.yorSales {
+#yorSales {
+    font-family: monospace;
+    padding-left: 40px;
+    font-size: var(--text-2x1);
     border: var(--light-gray);
     border-radius: 25px;
     grid-area: yorSales;
 }
 
 
-.boxRow {
+#boxRow {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -44,62 +47,88 @@
     grid-area: boxRow;
 }
 
-.payout {
-    margin-left: 10px;
+#payout {
+    margin: 0 5px 5px 20px;
     background-color: var(--gray);
     border: var(--light-gray);
     border-radius: 25px;
     grid-area: payout;
 }
 
-.revenue {
+#revenue {
+    margin: 0 5px 5px 5px;
     background-color: var(--gray);
     border: var(--light-gray);
     border-radius: 25px;
     grid-area: revenue;
 }
 
-.sessions {
+#sessions {
+    margin: 0 20px 5px 5px;
     background-color: var(--gray);
     border: var(--light-gray);
     border-radius: 25px;
     grid-area: sessions;
 }
 
-.aside {
+#aside {
+    height: 100%;
     padding: 5px;
     background-color: var(--gray);
     text-align: center;
     grid-area: aside;
 }
 
-.funnel {
-    margin-left: 10px;
+#funnel {
     background-color: var(--gray);
     border: var(--light-gray);
     border-radius: 25px;
     grid-area: funnel;
+    margin: 5px 5px 5px 20px;
 }
 
-.orders {
+#orders {
     background-color: var(--gray);
     border: var(--light-gray);
     border-radius: 25px;
     grid-area: orders;
+    margin: 5px 20px 5px 5px;
 }
 
-.transactions {
-    margin: 0 10px;
+#transactions {
+    margin: 5px 20px 5px 20px;
     background-color: var(--gray);
     border: var(--light-gray);
     border-radius: 25px;
     grid-area: transactions;
 }
 
+#logo {
+    margin: 10px;
+}
+
+
+
 .icons {
-    background-color: var(--gray);
+    padding: 5px;
+    background-color: var(--light-gray);
     border: var(--light-gray);
     border-radius: 25px;
+    text-align: center;
+    margin: 10px 10px 10px 10px;
+}
+
+#topButtons {
+    margin: 30px 10px;
+}
+
+#middleButtons {
+    margin: 30px 10px;
+}
+
+#bottomButtons {
+    margin: 150px 10px;
+
 }
 
 :root {
@@ -114,4 +143,10 @@
     --text-md: 18px;
     --text-xl: 40px;
     --text-2x1: 64px;
+}
+
+.pill-text {
+    width: 150px;
+    height: 50px;
+
 }
