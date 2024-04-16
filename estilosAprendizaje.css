@@ -107,12 +107,14 @@
     margin: 10px;
 }
 
-
+#colored {
+    background-color: black;
+}
 
 .icons {
     padding: 5px;
     background-color: var(--light-gray);
-    border: var(--light-gray);
+    border: var(--gray);
     border-radius: 25px;
     text-align: center;
     margin: 10px 10px 10px 10px;
@@ -146,7 +148,14 @@
 }
 
 .pill-text {
-    width: 150px;
-    height: 50px;
-
+    background-color: #ddd;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
 }
