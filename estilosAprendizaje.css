@@ -18,6 +18,10 @@
 
 }
 
+h1 {
+    width: 10ch;
+}
+
 #search {
     margin-left: 20px;
     border: var(--light-gray);
@@ -28,7 +32,7 @@
 #yorSales {
     font-family: monospace;
     padding-left: 40px;
-    font-size: var(--text-2x1);
+    font-size: var(--text-md);
     border: var(--light-gray);
     border-radius: 25px;
     grid-area: yorSales;
@@ -50,7 +54,8 @@
 
 #payout {
     margin: 0 5px 5px 20px;
-    background-color: var(--gray);
+    background-color: black;
+    color: white;
     border: var(--light-gray);
     border-radius: 25px;
     grid-area: payout;
@@ -112,10 +117,23 @@
     background-color: black;
 }
 
+#export {
+    position: absolute;
+    margin: 0px;
+    right: 30px;
+    background-color: black;
+}
+
+#filter-icon {
+    background-color: var(--light-gray);
+    border-radius: 30px;
+}
+
+
 .fotoPerfil {
+    /* object-fit: contain; */
     border-radius: 50px;
     position: absolute;
-    top: 20px;
     right: 20px;
     width: 50px;
     height: 50px;
@@ -149,6 +167,7 @@
 
 }
 
+/* Queda pendiente añadir el icono de busqueda sin que descoloque el texto*/
 /* #searchIcon {
     padding: 10px;
     margin: 0;
@@ -157,10 +176,11 @@
     border-radius: 25px;
 } */
 
+/* A expensas de cambiar esta basura */
 #notifications {
     position: absolute;
-    top: 20px;
     right: 80px;
+
 }
 
 :root {
@@ -181,13 +201,94 @@
     background-color: var(--light-gray);
     border: solid 1px var(--gray);
     color: var(--dark-gray);
-    padding: 15px;
+    padding: 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    margin: 4px 2px;
+    margin: 0px 6px;
     cursor: pointer;
     border-radius: 30px;
     font-family: monospace;
 
+}
+
+.pill-funnel {
+    position: absolute;
+    border-radius: 30px;
+    margin: -20px 6px;
+    padding: 21px;
+    right: 195px;
+    background-color: var(--gray);
+    color: black;
+    font-family: monospace;
+}
+
+.pill-date {
+    position: absolute;
+    height: 30px;
+    width: 250px;
+    right: 330px;
+    background-color: var(--gray);
+    border: solid 1px var(--gray);
+    color: var(--dark-gray);
+    padding: 12px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0px 6px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-family: monospace;
+
+}
+
+#date-icon {
+    float: left;
+    padding: 12px;
+    background-color: var(--dark-gray);
+    border: var(--darker-gray);
+    border-radius: 25px;
+    margin-top: -7px;
+}
+
+#date-icon:active {
+    transform: scale(0.9);
+}
+
+#date-word {
+    margin: 0;
+    margin-left: 50px;
+    font-size: var(--text-sm);
+    font-family: monospace;
+}
+
+.date-time {
+    float: right;
+    color: black;
+    padding: 0;
+    font-size: var(--text-xs);
+    font-family: monospace;
+}
+
+
+
+#select-date:active {
+    transform: scale(0.9);
+
+}
+
+.date {
+    color: black;
+    font-size: var(--text-sm);
+    margin: 0px;
+    margin-left: 50px;
+}
+
+#select-date {
+    padding: 12px;
+    background-color: var(--light-gray);
+    border: var(--darker-gray);
+    border-radius: 25px;
+    float: right;
+    margin-top: -40px;
 }
