@@ -4,12 +4,11 @@
     height: 100%;
     margin: 0;
     background-color: var(--light-gray);
-    grid-template-columns: 0.2fr 1.3fr 1.5fr;
-    grid-template-rows: 0.1fr 0.4fr 1fr 1.4fr 2.2fr 0.5fr;
+    grid-template-columns: 0.1fr 1.3fr 1.5fr;
+    grid-template-rows: 0.1fr 0.3fr 0.2fr 0.5fr 0.5fr;
     gap: 1px 1px;
     grid-auto-flow: row;
     grid-template-areas:
-        "aside . ."
         "aside search search"
         "aside yorSales yorSales"
         "aside boxRow boxRow"
@@ -291,4 +290,79 @@ h1 {
     border-radius: 25px;
     float: right;
     margin-top: -40px;
+}
+
+/*---------------------------- Pauout css -----------------------*/
+#first-box-payout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 15px;
+    align-items: center;
+}
+
+#payout-icon {
+
+    border-radius: 25px;
+    padding: 12px;
+    background-color: var(--gray);
+}
+
+#payout-text {
+    font-family: monospace;
+    font-size: var(--text-sm);
+    margin: 15px;
+    color: var(--gray);
+}
+
+#money-payout {
+    font-family: monospace;
+    color: var(--gray);
+    font-size: var(--text-xl);
+    margin: 0 10px 10px 20px;
+
+}
+
+#payout-soon {
+    font-family: monospace;
+    color: var(--gray);
+    font-size: var(--text-xs);
+    margin: 0 10px 10px 20px;
+}
+
+/*-------------------- Revenue css ---------------------------*/
+#first-box-revenue {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 15px;
+    align-items: center;
+}
+
+#revenue-icon {
+    border-radius: 25px;
+    padding: 12px;
+    background-color: var(--dark-gray);
+}
+
+#revenue-text {
+    font-family: monospace;
+    font-size: var(--text-sm);
+    margin: 15px;
+    color: black;
+}
+
+#money-revenue {
+    font-family: monospace;
+    color: black;
+    font-size: var(--text-xl);
+    margin: 0 10px 10px 20px;
+
+}
+
+#revenue-soon {
+    font-family: monospace;
+    color: black;
+    font-size: var(--text-xs);
+    margin: 0 10px 10px 20px;
 }
