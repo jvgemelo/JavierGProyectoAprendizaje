@@ -451,7 +451,7 @@ h1 {
     font-size: var(--text-xs);
     padding: 10px;
     color: black;
-    margin-left: 200px;
+    margin: 0 5px 0 auto;
 }
 
 .monthly-orders {
@@ -460,7 +460,7 @@ h1 {
     font-size: var(--text-xs);
     padding: 10px;
     color: black;
-    margin-left: 280px;
+    margin: 0 5px 0 auto;
 }
 
 .days {
