@@ -1,7 +1,7 @@
 #grid-layout {
     display: grid;
-    width: 100%;
-    height: 100%;
+    width: 98vw;
+    height: 100vh;
     margin: 0;
     background-color: var(--light-gray);
     grid-template-columns: 0.1fr 1.3fr 1.5fr;
@@ -19,6 +19,14 @@
 
 h1 {
     width: 10ch;
+}
+
+body {
+    background-color: var(--light-gray);
+}
+
+#notifications:active {
+    transform: scale(0.9);
 }
 
 #notifications-foto {
@@ -149,13 +157,25 @@ h1 {
     background-color: black;
 }
 
+
 #export {
     margin: 0 20px 0 0;
     background-color: black;
     color: var(--light-gray);
+    width: 150px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#export:active {
+    transform: scale(0.9);
 }
 
 #filter-icon {
+    padding: 12px;
     background-color: var(--light-gray);
     border-radius: 30px;
 }
@@ -192,7 +212,7 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: autopx;
+    margin: auto;
     align-items: center;
 }
 
@@ -239,7 +259,6 @@ h1 {
     padding: 20px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     margin: 12px 20px;
     cursor: pointer;
     border-radius: 30px;
@@ -247,16 +266,17 @@ h1 {
 
 }
 
-.pill-funnel {
-    border-color: var(--light-gray);
+#pill-funnel {
+    border-color: black;
     border-radius: 30px;
     border: solid 1px var(--gray);
-
+    width: 150px;
     margin: 0 6px;
-    padding: 18px;
+    /* padding: 3px; */
     background-color: var(--gray);
     color: black;
     font-family: monospace;
+    font-size: var(--text-xs);
 }
 
 .pill-date {
@@ -269,7 +289,11 @@ h1 {
     padding: 12px;
     text-align: left;
     text-decoration: none;
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px;
+    align-items: center;
     margin: 0p;
     cursor: pointer;
     border-radius: 30px;
@@ -277,7 +301,7 @@ h1 {
 
 }
 
-#date-box {
+.date-box {
     margin-top: 15px;
     display: flex;
     flex-direction: row;
@@ -286,22 +310,20 @@ h1 {
     align-items: center;
 }
 
-#date-icon {
-    float: left;
+.date-icon {
     padding: 12px;
     background-color: var(--dark-gray);
     border: var(--darker-gray);
     border-radius: 25px;
-    margin-top: -7px;
+    margin: 0px;
 }
 
-#date-icon:active {
+.date-icon:active {
     transform: scale(0.9);
 }
 
 #date-word {
-    margin: 0;
-    margin-left: 50px;
+    margin: 0 12px;
     font-size: var(--text-sm);
     font-family: monospace;
 }
@@ -316,7 +338,7 @@ h1 {
 
 
 
-#select-date:active {
+.select-date:active {
     transform: scale(0.9);
 
 }
@@ -324,17 +346,16 @@ h1 {
 .date {
     color: black;
     font-size: var(--text-sm);
-    margin: 0px;
-    margin-left: 50px;
+    margin: 2px 10px;
 }
 
-#select-date {
-    padding: 12px;
+.select-date {
+    padding: 10px;
     background-color: var(--light-gray);
     border: var(--darker-gray);
     border-radius: 25px;
     float: right;
-    margin-top: -40px;
+    margin: 0px;
 }
 
 /*---------------------------- Pauout css -----------------------*/
@@ -428,6 +449,12 @@ h1 {
     font-size: var(--text-xs);
 }
 
+#select-funnel {
+    background-color: var(--light-gray);
+    border-radius: 30px;
+    padding: 12px;
+}
+
 #chart-grid {
     /* transform: rotate(180deg); */
     display: grid;
@@ -515,6 +542,15 @@ h1 {
     border-radius: 20px;
     background-color: var(--dark-gray);
     height: 110px;
+}
+
+.align {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5px;
+    margin: 5px;
+    align-items: center;
 }
 
 .sales-num {
