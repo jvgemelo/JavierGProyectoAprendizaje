@@ -1,3 +1,705 @@
+#grid-layout {
+    display: grid;
+    width: 98vw;
+    height: 100vh;
+    margin: 0;
+    background-color: var(--light-gray);
+    grid-template-columns: 0.1fr 1.3fr 1.5fr;
+    grid-template-rows: 0.1fr 0.1fr 0.2fr 0.5fr;
+    gap: 1px 1px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "aside search search"
+        "aside yorSales yorSales"
+        "aside boxRow boxRow"
+        "aside funnel orders"
+        "aside transactions transactions"
+
+}
+
+h1 {
+    width: 10ch;
+}
+
 body {
-    
+    background-color: var(--light-gray);
+}
+
+#notifications:active {
+    transform: scale(0.9);
+}
+
+#notifications-foto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px;
+    align-items: center;
+
+}
+
+#search {
+    width: 100%;
+    margin-left: 20px;
+    border: var(--light-gray);
+    border-radius: 25px;
+    grid-area: search;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px;
+    align-items: center;
+}
+
+#your-sales {
+    padding: 0 30px;
+}
+
+#yorSales {
+    font-family: monospace;
+    padding: 0;
+    font-size: var(--text-md);
+    border: var(--light-gray);
+    border-radius: 25px;
+    grid-area: yorSales;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px;
+    align-items: center;
+}
+
+
+#boxRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "payout revenue sessions"
+        "payout revenue sessions"
+        "payout revenue sessions";
+    grid-area: boxRow;
+}
+
+#payout {
+    margin: 0 5px 5px 20px;
+    background-color: black;
+    color: white;
+    border: var(--light-gray);
+    border-radius: 25px;
+    grid-area: payout;
+}
+
+#revenue {
+    margin: 0 5px 5px 5px;
+    background-color: var(--gray);
+    border: var(--light-gray);
+    border-radius: 25px;
+    grid-area: revenue;
+}
+
+#sessions {
+    margin: 0 20px 5px 5px;
+    background-color: var(--gray);
+    border: var(--light-gray);
+    border-radius: 25px;
+    grid-area: sessions;
+}
+
+#aside {
+    height: 100%;
+    padding: 5px;
+    background-color: var(--gray);
+    text-align: center;
+    grid-area: aside;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0px;
+    align-items: center;
+}
+
+#funnel {
+    background-color: var(--gray);
+    border: var(--light-gray);
+    border-radius: 25px;
+    grid-area: funnel;
+    margin: 5px 5px 5px 20px;
+}
+
+#orders {
+    background-color: var(--gray);
+    border: var(--light-gray);
+    border-radius: 25px;
+    grid-area: orders;
+    margin: 5px 20px 5px 5px;
+}
+
+#transactions {
+    margin: 5px 20px 5px 20px;
+    background-color: var(--gray);
+    border: var(--light-gray);
+    border-radius: 25px;
+    grid-area: transactions;
+}
+
+#logo {
+    margin: 10px;
+}
+
+#colored {
+    background-color: black;
+}
+
+
+#export {
+    margin: 0 20px 0 0;
+    background-color: black;
+    color: var(--light-gray);
+    width: 150px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#export:active {
+    transform: scale(0.9);
+}
+
+#filter-icon {
+    padding: 12px;
+    background-color: var(--light-gray);
+    border-radius: 30px;
+}
+
+
+.fotoPerfil {
+    margin: 0 20px 0 0;
+    border-radius: 50px;
+    /* position: absolute; */
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    /* margin: 10px; */
+}
+
+
+.icons {
+    padding: 6.5px;
+    background-color: var(--light-gray);
+    border: var(--darker-gray);
+    border-radius: 25px;
+    text-align: center;
+    margin: 5px 7px 5px 5px;
+    cursor: pointer;
+
+}
+
+.icons:active {
+    transform: scale(0.9);
+
+}
+
+#topButtons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto;
+    align-items: center;
+}
+
+#middleButtons {
+    margin: auto;
+}
+
+#bottomButtons {
+    margin-bottom: auto;
+
+}
+
+/* Queda pendiente añadir el icono de busqueda sin que descoloque el texto*/
+/* #searchIcon {
+    padding: 10px;
+    margin: 0;
+    background-color: var(--gray);
+    border: var(--darker-gray);
+    border-radius: 25px;
+} */
+
+/* A expensas de cambiar esta basura */
+
+
+:root {
+    --light-gray: #f7f7f7;
+    --gray: #e2e2e2;
+    --dark-gray: #888888;
+    --darker-gray: #666666;
+    --main-green: #5ee85b;
+    --text-xs: 12px;
+    --text-sm: 14px;
+    --text-base: 16px;
+    --text-md: 18px;
+    --text-xl: 40px;
+    --text-2x1: 64px;
+}
+
+
+.pill-text {
+    background-color: var(--light-gray);
+    border: solid 1px var(--gray);
+    color: var(--dark-gray);
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 12px 20px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-family: monospace;
+
+}
+
+#pill-funnel {
+    border-color: black;
+    border-radius: 30px;
+    border: solid 1px var(--gray);
+    width: 150px;
+    margin: 0 6px;
+    /* padding: 3px; */
+    background-color: var(--gray);
+    color: black;
+    font-family: monospace;
+    font-size: var(--text-xs);
+}
+
+.pill-date {
+    height: 30px;
+    width: 250px;
+    right: 340px;
+    background-color: var(--gray);
+    border: solid 1px var(--gray);
+    color: var(--dark-gray);
+    padding: 12px;
+    text-align: left;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px;
+    align-items: center;
+    margin: 0p;
+    cursor: pointer;
+    border-radius: 30px;
+    font-family: monospace;
+
+}
+
+.date-box {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 15px;
+    align-items: center;
+}
+
+.date-icon {
+    padding: 12px;
+    background-color: var(--dark-gray);
+    border: var(--darker-gray);
+    border-radius: 25px;
+    margin: 0px;
+}
+
+.date-icon:active {
+    transform: scale(0.9);
+}
+
+#date-word {
+    margin: 0 12px;
+    font-size: var(--text-sm);
+    font-family: monospace;
+}
+
+.date-time {
+    float: right;
+    color: black;
+    padding: 0;
+    font-size: var(--text-xs);
+    font-family: monospace;
+}
+
+
+
+.select-date:active {
+    transform: scale(0.9);
+
+}
+
+.date {
+    color: black;
+    font-size: var(--text-sm);
+    margin: 2px 10px;
+}
+
+.select-date {
+    padding: 10px;
+    background-color: var(--light-gray);
+    border: var(--darker-gray);
+    border-radius: 25px;
+    float: right;
+    margin: 0px;
+}
+
+/*---------------------------- Pauout css -----------------------*/
+#first-box-payout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 15px;
+    align-items: center;
+}
+
+#payout-icon {
+
+    border-radius: 25px;
+    padding: 12px;
+    background-color: var(--gray);
+}
+
+#payout-text {
+    font-family: monospace;
+    font-size: var(--text-sm);
+    margin: 15px;
+    color: var(--gray);
+}
+
+#money-payout {
+    font-family: monospace;
+    color: var(--gray);
+    font-size: var(--text-xl);
+    margin: 0 10px 10px 20px;
+
+}
+
+#payout-soon {
+    font-family: monospace;
+    color: var(--gray);
+    font-size: var(--text-xs);
+    margin: 0 10px 10px 20px;
+}
+
+/*-------------------- Revenue css ---------------------------*/
+#first-box-revenue {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 15px;
+    align-items: center;
+}
+
+#revenue-icon {
+    border-radius: 25px;
+    padding: 12px;
+    background-color: var(--dark-gray);
+}
+
+#revenue-text {
+    font-family: monospace;
+    font-size: var(--text-sm);
+    margin: 15px;
+    color: black;
+}
+
+#money-revenue {
+    font-family: monospace;
+    color: black;
+    font-size: var(--text-xl);
+    margin: 0 10px 10px 20px;
+
+}
+
+#revenue-soon {
+    font-family: monospace;
+    color: black;
+    font-size: var(--text-xs);
+    margin: 0 10px 10px 20px;
+}
+
+/*--------------------  Gráficas ---------------------------*/
+#sales-funnel {
+    font-family: monospace;
+    color: black;
+    font-size: var(--text-md);
+    margin: 0 10px 5px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#text-sales-funnel {
+    font-size: var(--text-xs);
+}
+
+#select-funnel {
+    background-color: var(--light-gray);
+    border-radius: 30px;
+    padding: 12px;
+}
+
+#chart-grid {
+    /* transform: rotate(180deg); */
+    display: grid;
+    margin: 5px 20px;
+    height: auto;
+    background-color: var(--gray);
+    grid-template-columns: 0.3fr 0.3fr 0.3fr 0.3fr 0.3fr 0.3fr;
+    grid-template-rows: 0.2fr 0.3fr;
+    gap: 1px 5px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "mon-value tues-value wed-value thurs-value fri-value sat-value"
+        "monday tuesday wednesday thrusday friday saturday"
+        "mon tues wed thurs fri sat"
+
+}
+
+.monthly {
+    background-color: var(--light-gray);
+    border-radius: 30px;
+    font-size: var(--text-xs);
+    padding: 10px;
+    color: black;
+    margin: 0 5px 0 auto;
+}
+
+.monthly-orders {
+    background-color: var(--light-gray);
+    border-radius: 30px;
+    font-size: var(--text-xs);
+    padding: 10px;
+    color: black;
+    margin: 0 5px 0 auto;
+}
+
+.days {
+    text-align: center;
+    font-family: monospace;
+    color: var(--dark-gray)
+}
+
+#monday {
+    display: flex;
+    align-self: flex-end;
+    border-radius: 20px;
+    background-color: var(--dark-gray);
+    height: 120px;
+}
+
+#tuesday {
+    display: flex;
+    align-self: flex-end;
+    border-radius: 20px;
+    background-color: var(--dark-gray);
+    height: 90px;
+}
+
+#wednesday {
+    display: flex;
+    align-self: flex-end;
+    border-radius: 20px;
+    background-color: var(--dark-gray);
+    height: 70px;
+}
+
+#thursday {
+    display: flex;
+    align-self: flex-end;
+    border-radius: 20px;
+    background-color: var(--main-green);
+    height: 200px;
+}
+
+#friday {
+    display: flex;
+    align-self: flex-end;
+    border-radius: 20px;
+    background-color: var(--dark-gray);
+    height: 20px;
+}
+
+#saturday {
+    display: flex;
+    align-self: flex-end;
+    border-radius: 20px;
+    background-color: var(--dark-gray);
+    height: 110px;
+}
+
+.align {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5px;
+    margin: 5px;
+    align-items: center;
+}
+
+.sales-num {
+    font-family: monospace;
+    color: var(--gray);
+    background-color: black;
+    border-radius: 30px;
+    text-align: center;
+    padding: 3px;
+    font-size: var(--text-xs);
+}
+
+
+#selected-day {
+    color: var(--main-green);
+}
+
+#second-chart-grid {
+    /* transform: rotate(180deg); */
+    display: grid;
+    margin: 5px 20px;
+    height: auto;
+    background-color: var(--gray);
+    grid-template-columns: 0.3fr 0.3fr 0.3fr 0.3fr 0.3fr;
+    grid-template-rows: 0.2fr 0.3fr;
+    gap: 1px 5px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "Facebook box box box box"
+        "Instagram box box box box"
+        "Tiktok box box box box"
+        "Whatsapp box box box box"
+
+}
+
+#box1 {
+    background-color: var(--dark-gray);
+    border-radius: 20px;
+    padding: 30px;
+    margin: 1px;
+}
+
+#box2 {
+    background-color: var(--dark-gray);
+    border-radius: 20px;
+    padding: 30px;
+    margin: 1px;
+}
+
+#box3 {
+    background-color: var(--main-green);
+    border-radius: 20px;
+    padding: 30px;
+    margin: 1px;
+}
+
+#box4 {
+    background-color: var(--dark-gray);
+    border-radius: 20px;
+    padding: 30px;
+    margin: 1px;
+}
+
+#box5 {
+    background-color: var(--dark-gray);
+    border-radius: 20px;
+    padding: 30px;
+    margin: 1px;
+}
+
+#box6 {
+    background-color: var(--main-green);
+    border-radius: 20px;
+    padding: 30px;
+    margin: 1px;
+}
+
+#box7 {
+    background-color: black;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 1px;
+}
+
+#box8 {
+    background-color: black;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 1px;
+}
+
+#box9 {
+    background-color: var(--main-green);
+    border-radius: 20px;
+    padding: 30px;
+    margin: 1px;
+}
+
+#box10 {
+    background-color: var(--main-green);
+    border-radius: 20px;
+    padding: 30px;
+    margin: 1px;
+}
+
+#box11 {
+    background-color: var(--darker-gray);
+    border-radius: 20px;
+    padding: 30px;
+    margin: 1px;
+}
+
+#box12 {
+    background-color: var(--darker-gray);
+    border-radius: 20px;
+    padding: 30px;
+    margin: 1px;
+}
+
+#box13 {
+    background-color: var(--dark-gray);
+    border-radius: 20px;
+    padding: 30px;
+    margin: 1px;
+}
+
+#box14 {
+    background-color: var(--dark-gray);
+    border-radius: 20px;
+    padding: 30px;
+    margin: 1px;
+}
+
+#box15 {
+    background-color: var(--darker-gray);
+    border-radius: 20px;
+    padding: 30px;
+    margin: 1px;
+}
+
+#box16 {
+    background-color: black;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 1px;
+}
+
+.social-media {
+    text-align: center;
+    margin: 20px;
+    font-family: monospace;
 }
